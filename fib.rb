@@ -1,7 +1,7 @@
 def fibs(n)
   r_arr = [0, 1]
-  n.times { r_arr << r_arr[-1] + r_arr[-2] }
-  r_arr[0..n - 1]
+  r_arr << r_arr[-1] + r_arr[-2] until r_arr.length.equal?(n)
+  r_arr
 end
 
 def fibs_rec(n, arr = [0, 1])
