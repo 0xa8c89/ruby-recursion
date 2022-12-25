@@ -1,7 +1,15 @@
-def fib_loop(n)
+def fibs(n)
   r_arr = [0, 1]
   n.times { r_arr << r_arr[-1] + r_arr[-2] }
   r_arr[0..n - 1]
 end
 
-puts fib_loop(8).join(' ')
+def fibs_rec(n, arr = [0, 1])
+  return arr if arr.length == n
+
+  arr << arr[-1] + arr[-2]
+  fibs_rec(n, arr)
+end
+
+puts fibs(9).join(' ')
+puts fibs_rec(9).join(' ')
