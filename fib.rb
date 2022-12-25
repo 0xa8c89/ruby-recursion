@@ -7,8 +7,7 @@ end
 def fibs_rec(n, arr = [0, 1])
   return arr if arr.length == n
 
-  arr << arr[-1] + arr[-2]
-  fibs_rec(n, arr)
+  fibs_rec(n, arr << arr[-1] + arr[-2])
 end
 
 puts fibs(9).join(' ')
