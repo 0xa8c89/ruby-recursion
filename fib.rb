@@ -1,5 +1,3 @@
-# Fibonacci
-
 def fibs(n)
   r_arr = [0, 1]
   r_arr << r_arr[-1] + r_arr[-2] until r_arr.length.equal?(n)
